@@ -17,7 +17,7 @@ flowchart TB
     subgraph PVE["Single-Node Proxmox VE Server"]
         subgraph PROD["Production VM (Coolify)"]
             VM111 --> CRM["Skorp CRM (FastAPI, PG 18, Valkey 9, RabbitMQ 4, SeaweedFS)"]
-            VM111 --> APPS["Skorp Fit, Skorp Clinic, Skorp Finance"]
+            VM111 --> APPS["Skorp Fit, Skorp Clinic, Skorp Financy"]
         end
         subgraph CI["CI Runner LXC"]
             GHA["GitHub Actions Self-Hosted Runner + Ephemeral Docker CI"]
