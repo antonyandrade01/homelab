@@ -55,7 +55,8 @@ Este homelab pessoal concentra produção, CI/CD, observabilidade básica e uma 
 
 ### Números reais
 
-- Roda em um servidor Proxmox VE único (Xeon E3-1240 v2, sem AVX2) hospedando 9+ VMs e containers LXC ativos: produção (Coolify), Central de IA, runner próprio do GitHub Actions, memória Hindsight, Cloudflare Tunnel, Home Assistant, Pi-hole, Frigate e Traccar.
+- Montado em 2025 e recriado do zero em junho de 2026, com produção, CI/CD, backup testado e Central de IA.
+- Roda em um servidor Proxmox VE único (Xeon E3-1240 v2, sem AVX2) hospedando 9 VMs e containers LXC ativos: produção (Coolify), Central de IA, runner próprio do GitHub Actions, memória Hindsight, Cloudflare Tunnel, Home Assistant, Pi-hole, Frigate e Traccar.
 - Opera 21 agentes na Central de IA (1 coordenador + 20 perfis especializados no Hermes Agent) e 46 scripts de rotina.
 - Inclui servidor MCP escrito do zero em Python puro (`skorp_mcp.py`, JSON-RPC 2.0 sobre `stdio`, 21 ferramentas só leitura), validado por suíte de regressão de 17 casos e 250 chamadas registradas em produção em um único dia.
 - Mantém backup cifrado em AES-256 do banco do CRM de hora em hora (RPO de 1 hora) com cópia no Google Drive, `vzdump` diário das VMs/LXC e teste automático de restauração todo domingo validando 57 tabelas, versão do Alembic e pelo menos 95% das mensagens.
@@ -109,7 +110,8 @@ This personal homelab consolidates production hosting, self-hosted CI/CD, automa
 
 ### Real numbers
 
-- Runs on a single-node Proxmox VE server (Xeon E3-1240 v2, no AVX2) hosting 9+ active VMs and LXC containers: Coolify production VM, AI hub, GitHub Actions self-hosted runner, Hindsight memory service, Cloudflare Tunnel, Home Assistant, Pi-hole, Frigate, and Traccar.
+- First built in 2025 and rebuilt from scratch in June 2026 with production hosting, CI/CD, tested backups, and the AI hub.
+- Runs on a single-node Proxmox VE server (Xeon E3-1240 v2, no AVX2) hosting 9 active VMs and LXC containers: Coolify production VM, AI hub, GitHub Actions self-hosted runner, Hindsight memory service, Cloudflare Tunnel, Home Assistant, Pi-hole, Frigate, and Traccar.
 - Operates 21 Hermes Agent profiles (1 coordinator + 20 specialized bots) and 46 routine scripts.
 - Includes a hand-written read-only Python MCP server (`skorp_mcp.py`, JSON-RPC 2.0 over `stdio`, 21 read-only tools) backed by a 17-case regression suite and 250 logged production tool calls in a single day.
 - Runs hourly AES-256 encrypted CRM database backups (1-hour RPO) synced to Google Drive, daily Proxmox `vzdump` snapshots, and an automated Sunday restore test verifying 57 tables, Alembic head version, and at least 95% of messages.
